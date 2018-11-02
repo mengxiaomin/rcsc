@@ -1,0 +1,154 @@
+<!--pages/index/index.wxml-->
+<view class='wraper gc-flex gc-flex-col gc-flex-between'>
+  <view class='search gc-flex gc-flex-between'>
+    <!-- <view class='HeadPortrait' bindtap='topersonalCenter'>
+      <image src='{{headimgurl}}'></image>
+    </view> -->
+    <view class='input-box gc-flex-item gc-flex gc-flex-center'>
+      <input value='{{inputVal}}' bindinput="changeVal" placeholder-class='gc-ft-grayc' placeholder='请输入职位或者公司' confirm-type='search' bindconfirm="search" bindblur="changeInputVal"></input>
+      <view wx:if="{{empty}}" class='iconfont icon-shanchu gc-ft-grayc' bindtap='empty'></view>
+    </view>
+    <view class='iconfont icon-sousuo1 gc-ft-white' bindtap='search'></view>
+  </view>
+  <view class='nav gc-flex gc-flex-between'>
+    <block wx:for="{{nav}}">
+      <view class='navList gc-flex gc-flex-center {{item.id==navId?"navList-actived":""}} ' data-id='{{item.id}}' bindtap='showPop'>
+        <text>{{item.name}}</text>
+        <view class='iconfont icon-down'></view>
+      </view>
+    </block>
+  </view>
+  <!-- <view class='container full-width gc-flex-item gc-flex gc-flex-col gc-flex-between'>
+   <view class='full-width height' wx:if="{{hasData}}">
+      <view data-id='{{item.id}}' class='gc-block reset-block' wx:for="{{data}}" bindtap='toDetail'>
+        <view class='gc-flex gc-flex-between'>
+          <text class='position'>{{item.position_title}}</text>
+          <text class='wage'>{{item.min_wages}}-{{item.max_wages}}</text>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='clearfix gc-ft-center gc-ft-sm gc-ft-deepgray'>
+          <view class='keywords  gc-fl-left '>{{item.area_name}}</view>
+          <view class='keywords  gc-fl-left '>{{item.experience}}</view>
+          <view class='keywords  gc-fl-left '>{{item.education}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='full-width gc-flex gc-flex-center height' wx:else>
+      <view>
+        <view class='none'>
+          <image src='/resources/images/icon_ss@3x.png'></image>
+        </view>
+        <view class='gc-ft-deepgray gc-ft-center'>暂无数据</view>
+      </view>
+    </view>
+  </view> -->
+  
+    <scroll-view scroll-y="true" enable-back-to-top="true" bindscrolltolower="bindscrolltolower" class='container gc-flex-item full-width '>
+      <view class='full-width height' wx:if="{{hasData}}">
+        <view data-id='{{item.id}}' class='gc-block reset-block' wx:for="{{data}}" bindtap='toDetail'>
+          <view class='gc-flex gc-flex-between'>
+            <text class='position'>{{item.position_title}}</text>
+            <text class='wage'>{{item.min_wages}}-{{item.max_wages}}</text>
+          </view>
+          <view>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='clearfix gc-ft-center gc-ft-sm gc-ft-deepgray'>
+            <view class='keywords  gc-fl-left '>{{item.area_name}}</view>
+            <view class='keywords  gc-fl-left '>{{item.experience}}</view>
+            <view class='keywords  gc-fl-left '>{{item.education}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='full-width gc-flex gc-flex-center height' wx:else>
+        <view>
+          <view class='none'>
+            <image src='/resources/images/icon_ss@3x.png'></image>
+          </view>
+          <view class='gc-ft-deepgray gc-ft-center'>暂无数据</view>
+        </view>
+      </view>
+    </scroll-view>
+
+
+  <view class='pop-box' wx:if="{{show}}" bindtap='closePop'>
+    <view class='search gc-flex gc-flex-between' catchtap>
+      <view class='HeadPortrait' bindtap='topersonalCenter'>
+        <image src='{{headimgurl}}'></image>
+      </view>
+      <view class='input-box gc-flex-item gc-flex gc-flex-center'>
+        <input value='{{inputVal}}' bindinput="changeVal" placeholder-class='gc-ft-grayc' placeholder='请输入职位或者公司' confirm-type='search' bindconfirm="search"></input>
+        <view wx:if="{{empty}}" class='iconfont icon-shanchu gc-ft-grayc' bindtap='empty'></view>
+      </view>
+      <view class='iconfont icon-sousuo1 gc-ft-white' bindtap='search'></view>
+    </view>
+    <view class='nav gc-flex gc-flex-between' catchtap>
+      <block wx:for="{{nav}}">
+        <view class='navList gc-flex gc-flex-center {{item.id==navId?"navList-actived":""}} ' data-id='{{item.id}}' bindtap='showPop'>
+          <text>{{item.name}}</text>
+          <view class='iconfont icon-down'></view>
+        </view>
+      </block>
+    </view>
+    <view catchtap wx:if="{{navId==3}}" class='pop-requirements  gc-flex gc-flex-col gc-flex-between {{first_click?"open":""}}'>
+      <view class='pop-main full-width gc-flex-item'>
+        <view wx:for="{{Condition}}">
+          <view class='classif-title gc-ft-gray'>
+            <text>{{index}}</text>
+          </view>
+          <view class='gc-ft-sm gc-ft-center clearfix gc-ft-deepgray'>
+            <view wx:for="{{item[0]}}" bindtap='choose' data-id='{{idx}}' data-idx='{{index}}' wx:for-item="list" wx:for-index="idx" class='classif gc-fl-left {{idx==item[1].type?"classif-active":""}}'>{{list}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='pop-btn gc-flex gc-flex-center full-width gc-ft-lg gc-ft-center'>
+        <view class='left  gc-ft-deepgray' bindtap='reset'>重置</view>
+        <view class='right gc-ft-white' bindtap='submit'>确定</view>
+      </view>
+    </view>
+    <view catchtap wx:if="{{navId==2}}" class='pop-requirements  gc-flex gc-flex-col gc-flex-between {{first_click?"open":""}}'>
+      <view class='pop-main full-width gc-flex-item'>
+        <view>
+          <view class='classif-title gc-ft-gray'>
+            <text>行业</text>
+          </view>
+          <view class='gc-ft-sm gc-ft-center clearfix gc-ft-deepgray'>
+            <view wx:for="{{Industry}}" bindtap='chooseIndustry' data-id='{{item.id}}' class='classif gc-fl-left {{item.show==true?"classif-active":""}}'>{{item.industry_name}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='pop-btn gc-flex gc-flex-center full-width gc-ft-lg gc-ft-center'>
+        <view class='left  gc-ft-deepgray ' bindtap='Industryreset'>重置</view>
+        <view class='right gc-ft-white' bindtap='IndustrySubmit'>确定</view>
+      </view>
+    </view>
+    <view catchtap wx:if="{{navId==1}}" class='pop-requirements  gc-flex gc-flex-col gc-flex-between {{first_click?"open":""}}'>
+      <view class='pop-city full-width gc-flex-item'>
+        <view class='area gc-ft-center'>
+          <block wx:for="{{area}}">
+            <view data-id="{{item.id}}" class='area-list {{item.id==areaId?"area-actived":""}}' bindtap='changeArea'>{{item.name}}</view>
+          </block>
+        </view>
+        <view class='street'>
+          <block wx:for="{{street}}">
+            <view data-id="{{item.id}}" data-name="{{item.name}}" class='street-list gc-ft-center  {{item.id==streetId?"street-active":""}}' bindtap='changeStreet'>
+              <view>{{item.name}}</view>
+              <view class='iconfont {{item.id==streetId?"icon-xuanze":"icon-weixuan"}}'></view>
+              <!-- <view class='iconfont '></view> -->
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='pop-btn gc-flex gc-flex-center full-width gc-ft-lg gc-ft-center gc-ft-deepgray'>
+        <view class='left' bindtap='resetCity'>重置</view>
+        <view class='right reset-right' bindtap='submitCity'>确定</view>
+      </view>
+      <view class='switch gc-flex gc-flex-center gc-ft-deepgray' bindtap='changeCity'>
+        <view class='iconfont icon-qiehuan'></view>
+        <view>切换省份</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,77 @@
+<!--pages/companyDetails/companyDetails.wxml-->
+<!--pages/PositionDetails/PositionDetails.wxml-->
+<import src="/resources/template/Golive/Golive" />
+<view class='wraper gc-flex gc-flex-col gc-flex-between'>
+  <view class='gc-flex-item full-width'>
+    <view class='gc-block reset-block'>
+      <view class='gc-flex gc-flex-between'>
+        <view class='position bold'>{{data.title}}</view>
+        <view class='logo'>
+          <image src='{{data.logo}}'></image>
+        </view>
+      </view>
+      <view>{{data.industry_name}}/{{data.area_name}}/{{data.scale_name}}/{{data.financing_name}}</view>
+    </view>
+    <view class='gc-block reset-block padding'>
+      <view class='nav gc-block-line reset-block-line gc-flex gc-flex-center gc-ft-center'>
+        <block wx:for="{{nav}}">
+          <view data-id="{{item.id}}" class='nav-list  {{item.id==navId?"nav-actived":""}}' bindtap='changeNav'>
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+      <view class='gc-block-line' wx:if="{{navId==1}}">
+        <view class='gc-ft-sm indent detail-txt'>{{data.details}}</view>
+      </view>
+
+      <view class='gc-block-line' wx:if="{{navId==2}}">
+        <view class='gc-block reset-block-two'>
+          <view class='gc-block-line' wx:for="{{Position}}" data-id='{{item.id}}' bindtap='toDetail'>
+            <view class='gc-flex gc-flex-between'>
+              <text class='bold'>{{item.position_title}}</text>
+              <text class='wage bold'>{{item.min_wages}}-{{item.max_wages}}</text>
+            </view>
+            <view class='clearfix gc-ft-sm gc-ft-deepgray gc-ft-center'>
+              <view class='keywords  gc-fl-left '>{{item.area_name}}</view>
+              <view class='keywords  gc-fl-left '>{{item.experience}}</view>
+              <view class='keywords  gc-fl-left '>{{item.education}}</view>
+            </view>
+          </view>
+        
+        </view>
+      </view>
+
+    </view>
+    <view class='gc-block reset-block'>
+      <view class='detail'>
+        <view class='title'>公司信息</view>
+        <view class='gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>公司地址：</view>
+          <view class='gc-flex-item'>{{data.detail_address}}</view>
+        </view>
+        <view class=' gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>联系电话：</view>
+          <view class='gc-flex-item  gc-flex gc-flex-lc'>
+            <view>{{phone}}</view>
+            <view class='iconfont icon-dianhua' bindtap='call'></view>
+          </view>
+        </view>
+        <view class='gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>公司邮箱：</view>
+          <view class='gc-flex-item'>{{data.mailbox}}</view>
+        </view>
+        <view class='gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>展位信息：</view>
+          <view class='gc-flex-item'>{{data.message}}</view>
+        </view>
+      </view>
+
+
+    </view>
+    <view class='collection gc-ft-center gc-flex' >
+      <view class='iconfont {{star?"icon-shoucang":"icon-unie601"}}' bindtap='changeStar'></view>
+       <view class='iconfont icon-fanhui' bindtap="back"></view>
+    </view>
+  </view>
+  <template is="Golive" />
+</view>

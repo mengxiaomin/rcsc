@@ -1,0 +1,29 @@
+<!--pages/informationDetail/informationDetail.wxml-->
+<import src="/resources/template/Golive/Golive" />
+<import src="/wxParse/wxParse.wxml" />
+<view class='wraper gc-flex gc-flex-col gc-flex-between'>
+  <view class='gc-flex-item full-width'>
+    <view class='gc-block'>
+      <view class='gc-ft-center title'>{{datas.title}}</view>
+      <!-- <view class='indent'>春季补水面膜大减价啦，特别的便宜。一块钱100张 拉。快来抢快来买啦
+      </view> -->
+      <!-- <view class='banner'>
+        <image src='{{datas.title_img}}'></image>
+      </view> -->
+      <!-- {{datas.content}} -->
+
+      <!-- //这里data中article为bindName -->
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+      <view class='banner' wx:if="{{datas.url_img}}" data-url='{{datas.url}}' catchtap='Link'>
+        <image src='{{datas.url_img}}'></image>
+      </view>
+      <!-- <view class='gc-ft-right gc-ft-gray time'>{{datas.created_at}}</view> -->
+    </view>
+  </view>
+  <view class='back' bindtap='back'>
+    <view class='iconfont icon-fanhui'></view>
+  </view>
+
+  <template is="Golive" />
+</view>

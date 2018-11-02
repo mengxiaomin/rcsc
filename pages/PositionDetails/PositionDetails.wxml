@@ -1,0 +1,62 @@
+<!--pages/PositionDetails/PositionDetails.wxml-->
+<import src="/resources/template/Golive/Golive" />
+<view class='wraper gc-flex gc-flex-col gc-flex-between'>
+  <view class='full-width gc-flex-item'>
+    <view class='gc-block reset-block' data-id="{{data.company_id}}" bindtap='toDetail'>
+      <view class='gc-block-line'>
+        <view class='gc-flex gc-flex-between'>
+          <view class='position bold'>{{data.position_title}}</view>
+          <view class='wage bold'>{{data.min_wages}}-{{data.max_wages}}</view>
+        </view>
+        <view>{{data.industry_name}}/{{data.area_name}}/{{data.experience}}/{{data.education}}</view>
+      </view>
+      <view class='gc-block-line gc-flex gc-flex-between'>
+        <view class='logo'>
+          <image src='{{data.logo}}'></image>
+        </view>
+        <view class='gc-flex-item'>{{data.title}}</view>
+        <view class='iconfont icon-fh gc-ft-grayc'></view>
+      </view>
+    </view>
+    <view class='gc-block reset-block'>
+      <view class='detail'>
+        <view class='title'>职位详情</view>
+        <view class=' gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray' wx:for="{{datail}}">
+          <!-- <view>{{index+1}}、</view> -->
+          <view class='gc-flex-item'>{{item}}</view>
+        </view>
+      </view>
+
+      <view class='detail'>
+        <view class='title'>工作地点</view>
+        <view class=' gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view class='gc-flex-item'>{{data.position_address}}</view>
+        </view>
+      </view>
+      <view class='detail'>
+        <view class='title'>公司信息</view>
+        <view class=' gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>联系电话：</view>
+          <view class='gc-flex-item  gc-flex gc-flex-lc'>
+            <view>
+              {{phone}} </view>
+            <view class='iconfont icon-dianhua' bindtap='call'></view>
+          </view>
+        </view>
+        <view class='gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>公司邮箱：</view>
+          <view class='gc-flex-item'>{{data.mailbox}}</view>
+        </view>
+        <view class='gc-flex gc-flex-tc gc-ft-sm gc-ft-deepgray'>
+          <view>展位信息：</view>
+          <view class='gc-flex-item'>{{data.message}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='collection gc-ft-center gc-flex' >
+      <view class='iconfont {{star?"icon-shoucang":"icon-unie601"}}' bindtap='changeStar'></view>
+       <view class='iconfont icon-fanhui' bindtap="back"></view>
+    </view>
+  </view>
+  <template is="Golive" />
+</view>

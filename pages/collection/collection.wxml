@@ -1,0 +1,60 @@
+<!--pages/collection/collection.wxml-->
+<import src="/resources/template/Golive/Golive" />
+<view class='wraper gc-flex-item gc-flex gc-flex-col gc-flex-between'>
+  <view class='nav gc-flex gc-flex-lc gc-ft-center'>
+    <block wx:for="{{nav}}">
+      <view data-id='{{item.id}}' class='nav-list {{item.id==navId?"nav-active":""}}' bindtap='changeNav'>{{item.name}}</view>
+    </block>
+    <!-- <view class='nav-list'>公司</view> -->
+  </view>
+  <view class='container full-width gc-flex-item gc-flex gc-flex-col gc-flex-between'>
+    <view class='full-width gc-flex-item' wx:if="{{hasData}}">
+      <view class='gc-block reset-block' data-id='{{item.id}}' bindtap='toPositionDetails'  wx:for="{{data}}" wx:if="{{navId==2}}">
+        <view class='gc-flex gc-flex-between'>
+          <text class='position'>{{item.position_title}}</text>
+          <text class='wage'>{{item.min_wages}}-{{item.max_wages}}</text>
+        </view>
+        <view>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='clearfix gc-ft-center gc-ft-sm gc-ft-deepgray'>
+          <view class='keywords  gc-fl-left '>{{item.area_name}}</view>
+          <view class='keywords  gc-fl-left '>{{item.experience}}</view>
+          <view class='keywords  gc-fl-left '>{{item.education}}</view>
+        </view>
+      </view>
+      <view class='gc-block reset-block' data-id='{{item.id}}' bindtap='tocompanyDetails' wx:for="{{data}}"  wx:if="{{navId==1}}">
+        <view class='gc-block-line'>
+          <view class='gc-flex gc-flex-lc'>
+            <view class='logo'>
+              <image src='{{item.logo}}'></image>
+            </view>
+            <text class='position'>{{item.title}}</text>
+          </view>
+          <view class='clearfix gc-ft-center gc-ft-sm gc-ft-deepgray'>
+            <view class='keywords gc-fl-left'>{{item.area_name}}</view>
+            <view class='keywords gc-fl-left'>{{item.industry_name}}</view>
+            <view class='keywords gc-fl-left'>{{item.scale_name}}</view>
+            
+            <view class='keywords gc-fl-left'>{{item.financing_name}}</view>
+          </view>
+        </view>
+        <view class='gc-block-line gc-flex gc-flex-between line'>
+          <view class='gc-ft-sm gc-ft-deepgray'>热招：
+            <text class='gc-ft-blue '>{{item.hot_trick}}</text> 等{{item.position_num}}个职位</view>
+          <view class='iconfont icon-fh gc-ft-grayc'></view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:else class='full-width gc-flex-item gc-flex gc-flex-center'>
+      <view>
+        <view class='none'>
+          <image src='/resources/images/none.png'></image>
+        </view>
+        <view class='gc-ft-deepgray gc-ft-center'>暂无收藏</view>
+      </view>
+    </view>
+    <template is="Golive" />
+  </view>
+</view>

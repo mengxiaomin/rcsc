@@ -1,0 +1,67 @@
+<!--pages/information/information.wxml-->
+<view class='wraper'>
+  <swiper class='swiper-one' indicator-dots="{{indicatorDots}}" circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item data-url="{{item.url}}" bindtap="bannerToDetail">
+        <image src="{{item.img_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='tab gc-flex gc-flex-center'>
+    <view class='tab-list' wx:for="{{tab}}" bindtap='tabClick' data-id='{{item.id}}'>
+      <view class='logo'>
+        <image src='{{item.cat_image}}'></image>
+      </view>
+      <view class='gc-ft-center gc-ft-deepgray gc-ft-sm'>{{item.cat_name}}</view>
+    </view>
+  </view>
+  <view class='gc-flex gc-flex-between gc-ft-sm title-box' bindtap='toIndex'>
+    <view class='title'>精品推荐</view>
+    <view class='gc-flex gc-flex-center gc-ft-gray'>
+      <view>更多</view>
+      <view class='iconfont icon-fh gc-ft-sm'></view>
+    </view>
+  </view>
+  <view class='full-width container-swiper'>
+    <swiper class='swiper-two' previous-margin="24rpx" circular="true" next-margin="120rpx" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{RecommendCompany}}">
+        <swiper-item bindtap="companyDetails" data-id="{{item.id}}">
+          <view class="swiper-item">
+            <view class='gc-flex gc-flex-between'>
+              <view class='logo'>
+                <image src='{{item.logo}}'></image>
+              </view>
+              <view class='gc-flex-item hideen'>
+                <view class='swiper-title ellipsis'>{{item.title}}</view>
+                <view class='ellipsis'>{{item.industry_name}}/{{item.scale_name}}/{{item.financing_name}}</view>
+              </view>
+            </view>
+            <view class='gc-ft-deepgray gc-ft-sm swiper-txt'>{{item.details}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- <view>
+    <view class='title title-box gc-ft-sm'>新鲜资讯</view>
+  </view> -->
+   <view class='gc-flex gc-flex-between gc-ft-sm title-box' bindtap='toNews'>
+    <view class='title'>新鲜资讯</view>
+    <view class='gc-flex gc-flex-center gc-ft-gray'>
+      <view>更多</view>
+      <view class='iconfont icon-fh gc-ft-sm'></view>
+    </view>
+  </view>
+
+  <view class='container full-width clearfix'>
+    <view class='block gc-fl-left' wx:for="{{datas}}" data-id='{{item.id}}' bindtap='toDetail'>
+      <view class='img'>
+        <image src='{{item.title_img}}'></image>
+      </view>
+      <view class='text'>
+        <view class='ellipsis'>{{item.title}}</view>
+        <!-- <view class='gc-ft-deepgray ellipsis gc-ft-sm'>{{item.main}}</view> -->
+      </view>
+    </view>
+  </view>
+</view>

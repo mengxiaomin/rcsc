@@ -1,0 +1,48 @@
+/* pages/city/city.wxss */
+
+.wraper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.city {
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  width: 100%;
+}
+
+.city-list {
+  height: 84rpx;
+  line-height: 84rpx;
+  color: #666;
+}
+
+.city-actived {
+  color: #14ddd6;
+  background: #efeff4;
+}
+/* 
+.city-child {
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 3% 24rpx 3%;
+  box-sizing: border-box;
+}
+
+.cityName {
+  width: 48%;
+  margin-right: 4%;
+  background: #fff;
+  height: 56rpx;
+  line-height: 56rpx;
+  border-radius: 8rpx;
+  color: #666;
+  margin-top: 24rpx;
+}
+
+.cityName:nth-of-type(2n) {
+  margin-right: 0;
+} */

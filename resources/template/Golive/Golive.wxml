@@ -1,0 +1,5 @@
+<template name="Golive">
+ <view class='Golive'>
+    <text>青橄榄  提供技术支持</text>
+  </view>
+</template>

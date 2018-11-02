@@ -1,0 +1,36 @@
+<!--pages/registered/registered.wxml-->
+<import src="/resources/template/Golive/Golive" />
+<view class='wraper gc-flex gc-flex-between gc-flex-col'>
+  <view class='header gc-flex gc-flex-center'>
+    <view>
+      <view class='HeadPortrait'>
+        <image src='{{avatarUrl}}'></image>
+      </view>
+      <view class='gc-ft-center gc-ft-white'>
+        <text>登录</text>
+      </view>
+    </view>
+    <view class='triangle'></view>
+  </view>
+  <form bindsubmit="formSubmit" class='gc-flex-item'>
+  
+      <view class='container'>
+        <view class='list gc-flex gc-flex-between'>
+          <view class='iconfont icon-shjhm'></view>
+          <input name='Mobile' bindinput='getMobileval' class='gc-flex-item' placeholder-class='phcolor' type='number' placeholder='请输入您的手机号码' />
+          <view wx:if='{{isSend}}' catchtap='onSendTap' class='isSend gc-ft-sm send gc-ft-center gc-ft-white'>获取验证码</view>
+          <view wx:else class='isSend gc-ft-sm countdown gc-ft-center gc-ft-white'>已发送（{{time}}）秒</view>
+        </view>
+        <view class='list gc-flex gc-flex-between'>
+          <view class='iconfont icon-mima'></view>
+          <input name='Code' class='gc-flex-item' placeholder-class='phcolor' type='number' placeholder='请输入您的验证码' />
+        </view>
+      </view>
+       <button formType="submit">登录</button>
+      <!-- <view class='btn gc-ft-center gc-ft-white gc-ft-lg' bindtap='register'>
+        <text>登录</text>
+      </view> -->
+    
+  </form>
+  <template is="Golive" />
+</view>

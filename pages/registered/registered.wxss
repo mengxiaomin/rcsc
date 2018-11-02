@@ -1,0 +1,93 @@
+/* pages/registered/registered.wxss */
+
+.wraper {
+  height: 100vh;
+  background: #fff;
+}
+
+.header {
+  background: #14ddd6;
+  height: 313rpx;
+  width: 100%;
+  position: relative;
+}
+
+.HeadPortrait {
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4rpx solid #fff;
+  margin-bottom: 20rpx;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 16rpx solid #fff;
+  border-left: 16rpx solid transparent;
+  border-right: 16rpx solid transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  width: 640rpx;
+  margin: 80rpx auto 0;
+}
+
+.list {
+  background: #fff;
+  margin-bottom: 28rpx;
+  padding: 12rpx 12rpx 10rpx 30rpx;
+  border-radius: 40rpx;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  height: 80rpx;
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.icon-shjhm, .icon-mima {
+  margin-right: 20rpx;
+  color: #999;
+}
+
+.isSend {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  width: 220rpx;
+}
+
+.send {
+  background: #ff8400;
+}
+
+.countdown {
+  background: #999;
+}
+
+.phcolor {
+  color: #ccc;
+}
+
+input {
+  color: #2a2a2a;
+}
+
+button {
+  background: #14ddd6;
+  width: 640rpx;
+  margin: 80rpx auto 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  color: #fff;
+}
+.button-hover{
+  background: #14ddd6;
+  color: #fff;
+}

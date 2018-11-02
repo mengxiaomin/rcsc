@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/information/information",
+    "pages/EmploymentNews/EmploymentNews",
+    "pages/personalCenter/personalCenter",
+    "pages/index/index",
+    "pages/map/map",
+    "pages/authorization/authorization",
+    "pages/city/city",
+    "pages/registered/registered",
+    "pages/PositionDetails/PositionDetails",
+    "pages/informationDetail/informationDetail",
+    "pages/companyDetails/companyDetails",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "关心人才+"
+  },
+  "tabBar": {
+    "selectedColor": "#14DDD6",
+    "list": [
+      {
+        "pagePath": "pages/information/information",
+       
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+      
+        "text": "职位"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+       
+        "text": "我的"
+      }
+    ]
+  }
+}

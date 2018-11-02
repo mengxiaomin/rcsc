@@ -1,0 +1,8 @@
+<!-- 需要使用 button 来授权登录 -->
+<import src="/resources/template/Golive/Golive" />
+<view class='wraper'>
+  <image class='bg' src='/resources/images/bg.png'></image>
+  <button class='btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  <view wx:else>请升级微信版本</view>
+  <template is="Golive" />
+</view>

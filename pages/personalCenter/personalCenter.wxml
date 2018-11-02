@@ -1,0 +1,69 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='wraper  gc-flex gc-flex-col gc-flex-between'>
+  <view class='container gc-flex-item full-width'>
+    <view class='gc-block margin-t0'>
+      <view class='gc-block-line gc-flex gc-flex-between'>
+        <view class='gc-ft-deepgray'>头像</view>
+        <view class='HeadPortrait'>
+          <image src='{{data.headimgurl}}'></image>
+        </view>
+      </view>
+      <view class='gc-block-line  gc-flex gc-flex-between'>
+        <view class='gc-ft-deepgray'>用户名</view>
+        <view>
+          {{data.nickname}}
+        </view>
+      </view>
+      <view class='gc-block-line  gc-flex gc-flex-between' bindtap='changePhone'>
+        <view class='gc-ft-deepgray'>手机号码</view>
+        <view class='gc-flex-item gc-ft-right'>
+          {{data.mobile}}
+        </view>
+        <view class='iconfont icon-fh'></view>
+      </view>
+    </view>
+    <view class='gc-block'>
+      <view class='gc-block-line gc-flex gc-flex-between' bindtap='toCollection'>
+        <view class='gc-ft-deepgray'>我的收藏</view>
+        <view class='iconfont icon-fh'></view>
+      </view>
+      <view class='gc-block-line gc-flex gc-flex-between' bindtap='toCode'>
+        <view class='gc-ft-deepgray'>关于关心人才+</view>
+        <view class='iconfont icon-fh'></view>
+      </view>
+    </view>
+  </view>
+  <view class='pop-box' wx:if="{{showPop}}">
+    <view class='pop-hint'>
+      <view class='pop-top'>
+        <view class='gc-ft-deepgray'>修改手机号</view>
+        <view class='pop-container'>
+          <view class='pop-list gc-flex gc-flex-between'>
+            <view class='gc-ft-blue name'>+86</view>
+            <view class='gc-flex-item'>
+              <input placeholder-class='gc-ft-grayc' bindinput='getMobileval' placeholder='请输入手机号码' type='number'></input>
+            </view>
+            <view wx:if='{{isSend}}' bindtap='onSendTap' class='isSend gc-ft-sm send gc-ft-center gc-ft-white'>获取验证码</view>
+            <view wx:else class='isSend gc-ft-sm countdown gc-ft-center gc-ft-white'>（{{time}}）秒</view>
+          </view>
+          <view class='pop-list gc-flex gc-flex-between'>
+            <view class='name gc-ft-deepgray gc-ft-sm'>验证码</view>
+            <view class='gc-flex-item'>
+              <input bindinput='getCodeval' placeholder-class='gc-ft-grayc' placeholder='请输入验证码' type='number'></input>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='pop-btn gc-flex gc-ft-center gc-ft-lg'>
+        <view class='left gc-ft-deepgray' bindtap='cancel'>取消</view>
+        <view class='right gc-ft-blue' bindtap='register'>确定</view>
+      </view>
+    </view>
+  </view>
+  <official-account class="official-account"></official-account>
+  <view class='pop-box guide-box' wx:if="{{guide}}" bindtap='close'>
+    <view class='guide'>
+      <image src='/resources/images/pic_tc@3x.png'></image>
+    </view>
+  </view>
+</view>

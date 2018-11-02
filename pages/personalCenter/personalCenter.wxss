@@ -1,0 +1,111 @@
+/* pages/personalCenter/personalCenter.wxss */
+
+.wraper {
+  min-height: 100vh;
+}
+
+.container {
+  border-top: 1px solid #efeff4;
+}
+
+.margin-t0 {
+  margin-top: 0;
+}
+
+.HeadPortrait {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon-fh {
+  color: #ccc;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.pop-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.pop-hint {
+  background: #fff;
+  width: 596rpx;
+  margin: 300rpx auto 0;
+  border-radius: 8rpx;
+  overflow: hidden;
+  border-top: 8rpx solid #14ddd6;
+}
+
+.pop-top {
+  padding: 24rpx;
+  border-bottom: 2rpx solid #efeff4;
+}
+
+.pop-btn view {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.left {
+  border-right: 2rpx solid #efeff4;
+}
+
+.pop-container {
+  margin-top: 20rpx;
+  border: 2rpx solid #efeff4;
+  padding: 0 24rpx;
+}
+
+.pop-list {
+  border-bottom: 2rpx solid #efeff4;
+  padding: 20rpx 0;
+}
+
+.pop-list:last-child {
+  border-bottom: none;
+}
+
+.send {
+  color: #14ddd6;
+  border: 2rpx solid #14ddd6;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 40rpx;
+}
+
+.name {
+  width: 92rpx;
+  margin-right: 20rpx;
+  border-right: 2rpx solid #efeff4;
+}
+
+.countdown {
+  color: #fff;
+  border: 2rpx solid #999;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 40rpx;
+  background: #999;
+}
+.guide-box{
+  background: rgba(0, 0, 0, 0.6)
+}
+.guide {
+  width: 76vw;
+  height: 76vw;
+  padding-top: 20rpx;
+  margin: 0 auto;
+}
+.official-account{
+  width: 100%;
+}

@@ -1,0 +1,41 @@
+/* pages/informationDetail/informationDetail.wxss */
+
+.wraper {
+  border: 2rpx solid #efeff4;
+  background: #fff;
+}
+
+.gc-block {
+  margin-top: 0;
+  line-height: 2;
+  padding: 10px 0;
+  margin: 0 12px;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+.banner {
+  width: 100%;
+  height: 110rpx;
+}
+
+.wraper {
+  min-height: 100vh;
+}
+
+.time {
+  margin-top: 40rpx;
+}
+
+.full-width {
+  width: 100%;
+}
+

@@ -1,0 +1,105 @@
+/* pages/information/information.wxss */
+
+.swiper-one {
+  width: 100%;
+  height: 300rpx;
+}
+
+.swiper-two {
+  width: 100%;
+  height: 232rpx;
+}
+
+.wraper {
+  width: 100%;
+  height: 100vh;
+}
+
+.tab {
+  width: 100%;
+  background: #fff;
+  height: 167rpx;
+}
+
+.tab-list {
+  width: 25%;
+}
+
+.logo {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto 12rpx;
+}
+
+.container {
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.block {
+  background: #fff;
+  width: 49%;
+  margin-right: 2%;
+  border-radius: 8rpx;
+  overflow: hidden;
+  line-height: 1.8;
+  margin-bottom: 20rpx;
+}
+
+.block:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.img {
+  width: 100%;
+  height: 193rpx;
+}
+
+.text {
+  padding: 8rpx 20rpx;
+}
+
+.title-box {
+  margin: 24rpx 24rpx 0;
+}
+
+.title {
+  border-left: 8rpx solid #14ddd6;
+  line-height: 1;
+  padding-left: 14rpx;
+}
+
+.swiper-item {
+  background: #fff;
+  width: 88%;
+  border-radius: 8rpx;
+  overflow: hidden;
+  padding: 24rpx;
+  line-height: 1.8;
+}
+
+.swiper-item .swiper-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.container-swiper {
+  margin-top: 24rpx;
+}
+
+.swiper-item .logo {
+  width: 76rpx;
+  height: 76rpx;
+  margin-right: 24rpx;
+}
+
+.swiper-title {
+  font-weight: bold;
+}
+
+.hideen {
+  overflow: hidden;
+}

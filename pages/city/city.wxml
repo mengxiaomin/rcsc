@@ -1,0 +1,13 @@
+<!--pages/city/city.wxml-->
+<view class='wraper gc-flex gc-flex-tc'>
+  <view class='city gc-ft-center'>
+    <block wx:for="{{city}}">
+      <view data-id='{{item.id}}' class='city-list {{item.id==cityId?"city-actived":""}} ' bindtap='changeCity'>{{item.name}}</view>
+    </block>
+  </view>
+  <!-- <view class='city-child gc-flex-item'>
+    <view class='clearfix gc-ft-center gc-ft-sm'>
+      <view class='cityName gc-fl-left' wx:for="{{getChildAddress}}" data-id='{{item.id}}' bindtap='changeCitychild'>{{item.name}}</view>
+    </view>
+  </view> -->
+</view>

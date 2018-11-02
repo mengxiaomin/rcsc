@@ -1,0 +1,82 @@
+/* pages/PositionDetails/PositionDetails.wxss */
+
+.reset-block {
+  margin: 20rpx 24rpx 0;
+  border-radius: 8rpx;
+  overflow: hidden;
+  box-shadow: 2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
+
+.logo {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.wage {
+  color: #14ddd6;
+}
+
+.title {
+  padding-left: 24rpx;
+  border-left: 8rpx solid #14ddd6;
+  line-height: 1;
+  margin-bottom: 20rpx;
+}
+
+.detail {
+  line-height: 1.8;
+  margin-bottom: 40rpx;
+}
+
+.detail:last-child {
+  margin-bottom: 0;
+}
+
+.wraper {
+  min-height: 100vh;
+}
+
+.icon-dianhua {
+  line-height: 1;
+  color: #14ddd6;
+  margin-left: 40rpx;
+}
+
+.collection {
+  background: #fff;
+  width: 148rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  margin-top: 24rpx;
+  position: fixed;
+  right: 0;
+  bottom: 160rpx;
+  z-index: 1;
+  padding-left: 16rpx;
+  box-shadow: 2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, 0.1);
+}
+.collection .iconfont{
+width: 50%;
+text-align: center;
+}
+
+.icon-fanhui{
+  color: #ccc;
+}
+.icon-unie601 {
+  color: #ccc;
+}
+
+.icon-shoucang {
+  color: #14ddd6;
+}

@@ -1,0 +1,130 @@
+/* pages/companyDetails/companyDetails.wxss */
+
+.reset-block {
+  margin: 20rpx 24rpx 0;
+  border-radius: 8rpx;
+  overflow: hidden;
+  box-shadow: 2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
+
+.logo {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.keywords {
+  background: #efeff4;
+  margin-right: 24rpx;
+  padding: 0 20rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  box-sizing: border-box;
+  margin-top: 16rpx;
+  border-radius: 8rpx;
+}
+
+.wage {
+  color: #14ddd6;
+}
+
+.title {
+  padding-left: 24rpx;
+  border-left: 8rpx solid #14ddd6;
+  line-height: 1;
+  margin-bottom: 20rpx;
+}
+
+.detail {
+  line-height: 1.8;
+  margin-top: 10rpx;
+}
+
+.wraper {
+  min-height: 100vh;
+}
+
+.icon-dianhua {
+  line-height: 1;
+  color: #14ddd6;
+  margin-left: 40rpx;
+}
+
+.collection {
+  background: #fff;
+  width: 148rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  margin-top: 24rpx;
+  position: fixed;
+  right: 0;
+  bottom: 160rpx;
+  z-index: 1;
+  padding-left: 16rpx;
+  box-shadow: 2rpx 2rpx 20rpx 2rpx rgba(0, 0, 0, 0.1);
+}
+
+.collection .iconfont {
+  width: 50%;
+  text-align: center;
+}
+
+.icon-fanhui {
+  color: #ccc;
+}
+
+.icon-unie601 {
+  color: #ccc;
+}
+
+.icon-shoucang {
+  color: #14ddd6;
+}
+
+.nav-list {
+  width: 30%;
+}
+
+.nav-list text {
+  padding-bottom: 9rpx;
+}
+
+.nav-actived {
+  color: #14ddd6;
+}
+
+.gc-block .reset-block-line {
+  padding: 0;
+}
+
+.nav-actived text {
+  border-bottom: 2rpx solid #14ddd6;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+.padding {
+  padding: 10px 0;
+}
+
+.detail-txt {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+}
+
+.reset-block-two {
+  margin-top: 0;
+  padding: 0 12px;
+}

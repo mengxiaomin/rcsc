@@ -1,0 +1,241 @@
+/**app.wxss**/
+@import '/resources/icon/iconfont.wxss';
+@import '/resources/template/Golive/Golive.wxss';
+
+image {
+  width: 100%!important;
+  height: 100%;
+}
+
+page {
+  font-size: 28rpx;
+  background-color: #efeff4;
+  color: #2a2a2a;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+}
+
+.tb-mode {
+  width: 100%;
+  display: table;
+}
+
+.tb-mode .tb-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tb-mode .vertical-top {
+  vertical-align: top;
+}
+
+.tb-mode .tb-row {
+  display: table-row;
+}
+
+/*浮动*/
+
+.gc-fl-left {
+  float: left;
+}
+
+.gc-fl-right {
+  float: right;
+}
+
+/*清除浮动*/
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*文字排列*/
+
+.gc-ft-left {
+  text-align: left;
+}
+
+.gc-ft-center {
+  text-align: center;
+}
+
+.gc-ft-right {
+  text-align: right;
+}
+
+/*字体大小*/
+
+.gc-ft-sm {
+  font-size: 24rpx;
+}
+
+.gc-ft-md {
+  font-size: 28rpx !important;
+}
+
+.gc-ft-lg {
+  font-size: 32rpx !important;
+}
+
+.gc-ft-20 {
+  font-size: 40rpx !important;
+}
+
+.gc-ft-24 {
+  font-size: 48rpx !important;
+}
+
+/*字体颜色*/
+
+.gc-ft-gray {
+  color: #999;
+}
+
+.gc-ft-deepgray {
+  color: #666;
+}
+
+.gc-ft-grayc {
+  color: #ccc;
+}
+
+.gc-ft-normal {
+  color: #2a2a2a;
+}
+
+.gc-ft-white {
+  color: #fff;
+}
+
+.gc-ft-red {
+  color: #ff5a5e;
+}
+
+/*盒子布局*/
+
+.gc-flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.gc-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.gc-flex-lc {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gc-flex-tc {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.gc-flex-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gc-flex-col {
+  flex-direction: column;
+}
+
+.gc-flex-top {
+  align-items: flex-start;
+}
+
+.gc-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gc-flex-item {
+  flex: 1;
+}
+
+.relative_ {
+  position: relative;
+}
+
+/*列表*/
+
+.gc-block {
+  padding: 10px 12px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.gc-block .gc-block-line {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.gc-block .gc-block-line:first-of-type {
+  padding-top: 0;
+}
+
+.gc-block .gc-block-line:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.gc-tab {
+  background: #fff;
+  line-height: 40px;
+}
+
+.gc-tab .gc-tab-item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.gc-tab .gc-tab-item span {
+  width: 100%;
+  border-left: 1px solid #e6e6e6;
+  line-height: 20px;
+  display: inline-block;
+}
+
+.gc-tab .gc-tab-item:first-of-type span {
+  border-left: 1px solid transparent;
+}
+
+.gc-tab .actived {
+  color: #00a5f3;
+  border-bottom: 1px solid #00a5f3;
+}
+
+/* 本次项目公共 */
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.gc-ft-blue {
+  color: #14ddd6;
+}
+
+.back {
+  position: fixed;
+  bottom: 68rpx;
+  right: 42rpx;
+  width: 70rpx;
+  text-align: center;
+  background: #14ddd6;
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 50%;
+}
